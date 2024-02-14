@@ -15,5 +15,5 @@
 #'\code{data('res_example',package='octad.db')} \cr
 #'\code{res=subset(res_example,abs(log2FoldChange)>1&padj<0.001) #load example expression dataset} \cr
 #'\code{sRGES=runsRGES(res,max_gene_size=100,permutations=1000,output=FALSE)} \cr
-
-"sRGES_example"
+#' @usage data(sRGES_example)
+'sRGES_example'

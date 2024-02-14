@@ -31,6 +31,6 @@
 #' @references
 #' Zeng, B., Glicksberg, B.S., Newbury, P., Chekalin, E., Xing, J., Liu, K., Wen, A., Chow, C. and Chen, B., 2021. OCTAD: an open workspace for virtually screening therapeutics targeting precise cancer patient groups using gene expression features. Nature protocols, 16(2), pp.728-753.
 #' [https://www.nature.com/articles/s41596-020-00430-z](https://www.nature.com/articles/s41596-020-00430-z)
-#' @docType package
+#' _PACKAGE package
 #' @name octad
 NULL

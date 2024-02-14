@@ -30,4 +30,5 @@
 #'\code{control_id=subset(phenoDF,biopsy.site=='LIVER'&sample.type=='normal')$sample.id[1:50]} \cr 
 #'\code{res=diffExp(case_id,control_id,source='octad.small',output=FALSE)} 
 #'
-"res_example"
+#' @usage data(res_example)
+'res_example'

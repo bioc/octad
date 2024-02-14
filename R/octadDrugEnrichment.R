@@ -64,8 +64,10 @@ octadDrugEnrichment <- function(sRGES = NULL, target_type = "chembl_targets", en
         } else {
             rownames(rgess) <- drug_pred$pert_iname
             rgess <- cbind(rgess, rgess)  # PLUG FOR GSVA BUG, FIX AS THEY WOULD FIX THEIR CODE
-            gsea_results <- GSVA::gsva(rgess, cmpdSets, method = "ssgsea", parallel.sz = 8, ssgsea.norm = TRUE,
-                verbose = FALSE)
+            #gsea_results <- GSVA::gsva(rgess, cmpdSets, method = "ssgsea", parallel.sz = 8, ssgsea.norm = TRUE,verbose = FALSE)
+            gsva_params=GSVA::ssgseaParam(rgess, cmpdSets, normalize = TRUE) #gsva update
+            gsea_results <- GSVA::gsva(gsva_params,verbose = FALSE)
+            
             gsea_results <- gsea_results[-1, ]
             gsea_results <- merge(random_gsea_score[[target_type_selected]], gsea_results, by = "row.names")
 
