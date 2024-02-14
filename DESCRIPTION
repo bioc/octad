@@ -1,6 +1,10 @@
 Package: octad
 Title: Open Cancer TherApeutic Discovery (OCTAD)
+<<<<<<< HEAD
 Version: 1.00.00
+=======
+Version: 0.1.02
+>>>>>>> origin/master
 Authors@R: 
     c(person(given = "E.",
            family = "Chekalin",
@@ -32,7 +36,11 @@ License: Artistic-2.0
 Encoding: UTF-8
 LazyData: FALSE
 Roxygen: list(markdown = TRUE)
+<<<<<<< HEAD
 RoxygenNote: 7.3.1
+=======
+RoxygenNote: 7.2.3
+>>>>>>> origin/master
 Depends: 
     R (>= 4.2.0),
     magrittr,

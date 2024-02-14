@@ -25,9 +25,12 @@ octadDrugEnrichment <- function(sRGES = NULL, target_type = "chembl_targets", en
         outputFolder <- tempdir()
         message("outputFolder is NULL, writing output to tempdir()")
     }
+    
+    if(!dir.exists(outputFolder)){
+      stop('Looks like output path ', outputFolder,' is either non-existent or obstructed. Check outputFolder option.')
+    }
 
-
-    if (!dir.exists(enrichFolder)) {
+    if (!dir.exists(file.path(outputFolder, enrichFolder))) {
         dir.create(file.path(outputFolder, enrichFolder))
     }
     # eh_dataframe <- as.data.frame(S4Vectors::mcols(AnnotationHub::query(.eh, 'octad.db')))['title']
@@ -120,7 +123,9 @@ octadDrugEnrichment <- function(sRGES = NULL, target_type = "chembl_targets", en
                     clusternames <- as.character((gsea_p[which(gsea_p$padj <= 0.05), ])$target)
                     if (length(clusternames) != 0) {
                       topclusterlist <- cmpdSets[clusternames]
-                      clusterdf <- read.csv2(paste0(enrichFolder.n, "misc.csv"), header = FALSE)
+                      #clusterdf <- read.csv2(paste0(enrichFolder.n, "misc.csv"), header = FALSE)
+                      clusterdf=as.data.frame(sapply(topclusterlist, toString))
+                      
                       clusterdf$cluster <- clusternames
                       clusterdf$pval <- (gsea_p[which(gsea_p$padj <= 0.05), ])$padj
                       colnames(clusterdf)[1] <- "drugs.in.cluster"
