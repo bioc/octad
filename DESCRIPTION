@@ -1,6 +1,6 @@
 Package: octad
 Title: Open Cancer TherApeutic Discovery (OCTAD)
-Version: 1.5.1
+Version: 1.6.0
 Authors@R: 
     c(person(given = "E.",
            family = "Chekalin",
