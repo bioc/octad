@@ -46,7 +46,7 @@ case_id=HCC_primary$sample.id
 #but can use custom expression set,
 #by default output=TRUE and outputFolder option is empty,
 #which creates control corMatrix.csv to working directory
-control_id=computeRefTissue(case_id,outputFolder='',output=TRUE,
+control_id=computeRefTissue(case_id,output=TRUE,
 expSet = "octad",control_size = 50)
 }
 \keyword{computeRefTissue}
