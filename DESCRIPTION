@@ -67,3 +67,4 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 biocViews: Classification, GeneExpression, Pharmacogenetics, Pharmacogenomics, Software, GeneSetEnrichment
+Config/Bioconductor/UnsupportedPlatforms: windows
